@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giulio Binosi – Academic Website</title>
-  <meta name="google-site-verification" content="6_1xe0_NhSQeqdDxHuCodyV4L2swG8ZqlA6ueLLjR3E" />
   <style>
     :root {
       --primary-color: #d2b48c;
@@ -20,20 +19,60 @@
       color: var(--text-color);
       line-height: 1.6;
     }
-    header {
+    /* HEADER senza immagine: titolo centrato perfettamente */
+    header.no-image {
       background-color: var(--primary-color);
-      padding: 2rem 1rem;
-      text-align: center;
       color: var(--secondary-color);
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      height: 160px; /* altezza fissa per effetto centratura */
+      text-align: center;
     }
-    header h1 {
+    header.no-image h1 {
       margin: 0;
       font-weight: 700;
       font-size: 2.5rem;
       letter-spacing: 1px;
     }
-    header p {
+    header.no-image p {
+      margin: 0.3rem 0 0 0;
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+    /* HEADER con immagine a sinistra e testo centrato verticalmente */
+    header.with-image {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header.with-image img {
+      width: 150px;
+      height: auto;
+      margin: 0;
+    }
+    header.with-image div {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-left: -3cm; /* spostamento a sinistra */
+    }
+    header.with-image h1 {
+      margin: 0;
+      font-weight: 700;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+    }
+    header.with-image p {
       margin: 0.3rem 0 0 0;
       font-weight: 500;
       font-size: 1.1rem;
@@ -81,28 +120,34 @@
       color: var(--link-color);
       text-decoration: underline;
     }
-    /* Profiles section */
-    #profiles ul {
-      list-style: none;
-      padding: 0;
-    }
-    #profiles li {
-      margin-bottom: 0.5rem;
-    }
-    #profiles a {
+    /* Stile per i link nelle pubblicazioni */
+    #publications a {
       color: var(--link-color);
       text-decoration: underline;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
-    #profiles a:hover {
-      color: var(--secondary-color);
+    #publications a:hover {
+      color: var(--primary-color);
+      background-color: rgba(210, 180, 140, 0.15);
     }
   </style>
 </head>
 <body>
-  <header>
+  <!-- HEADER senza immagine, titolo centrato -->
+  <header class="no-image" id="headerNoImage">
     <h1>Giulio Binosi</h1>
     <p>INdAM</p>
     <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+  </header>
+
+  <!-- HEADER con immagine a sinistra e testo centrato verticalmente -->
+  <header class="with-image" id="headerWithImage" style="display:none;">
+    <img src="1747A1E6-FCA6-48BC-991F-B86AD8027F7C.jpeg" alt="Foto di Giulio Binosi" />
+    <div>
+      <h1>Giulio Binosi</h1>
+      <p>INdAM</p>
+      <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+    </div>
   </header>
 
   <nav>
@@ -110,15 +155,16 @@
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
-    <a href="#talks">Talks &amp; Conferences</a>
+    <a href="#talks">Talks &amp; seminars</a>
+    <a href="#Conferences">Conferences</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </nav>
-
   <main>
     <section id="about">
       <h2>About Me</h2>
-      <p>Welcome! I am Giulio Binosi, a researcher specializing in hypercomplex analysis, harmonic analysis, slice analysis, Dunkl analysis and complex and differential geometry. I work primarily with quaternionic and Clifford algebras. I completeed my PhD at Trento university, now I am a Postdoc at Florence university with INdAM's project SUNRISE.
+      <p>
+        Welcome! I am Giulio Binosi, a researcher specializing in hypercomplex analysis, harmonic analysis, slice analysis, Dunkl analysis and complex and differential geometry. I work primarily with quaternionic and Clifford algebras. I completeed my PhD at Trento university, now I am a Postdoc at Florence university with INdAM's project SUNRISE.
       </p>
     </section>
     <section id="research">
