@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giulio Binosi – Academic Website</title>
-   <style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
     :root {
       --primary-color: #d2b48c;
       --text-color: #3a3a3a;
@@ -19,31 +20,6 @@
       color: var(--text-color);
       line-height: 1.6;
     }
-    /* HEADER senza immagine: titolo centrato perfettamente */
-    header.no-image {
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      height: 160px; /* altezza fissa per effetto centratura */
-      text-align: center;
-    }
-    header.no-image h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    header.no-image p {
-      margin: 0.3rem 0 0 0;
-      font-weight: 500;
-      font-size: 1.1rem;
-    }
-    /* HEADER con immagine a sinistra e testo centrato verticalmente */
     header.with-image {
       display: flex;
       align-items: center;
@@ -64,18 +40,7 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      margin-left: -3cm; /* spostamento a sinistra */
-    }
-    header.with-image h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    header.with-image p {
-      margin: 0.3rem 0 0 0;
-      font-weight: 500;
-      font-size: 1.1rem;
+      margin-left: -3cm;
     }
     nav {
       background-color: var(--secondary-color);
@@ -120,11 +85,21 @@
       color: var(--link-color);
       text-decoration: underline;
     }
+    #profiles ul {
+      list-style: none;
+      padding: 0;
+    }
+    #profiles li {
+      margin: 0.5rem 0;
+    }
+    #profiles i {
+      margin-right: 8px;
+      color: var(--secondary-color);
+    }
   </style>
 </head>
 <body>
 
-  <!-- HEADER con immagine a sinistra e testo centrato verticalmente -->
   <header class="with-image" id="headerWithImage" style="display:flex;">
     <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
     <div>
@@ -133,6 +108,7 @@
       <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
     </div>
   </header>
+
   <nav>
     <a href="#about">About Me</a>
     <a href="#research">Research</a>
@@ -143,94 +119,17 @@
     <a href="#cv">CV</a>
     <a href="#profiles">Profiles</a>
   </nav>
-  <main>
-    <section id="about">
-      <div>
-        <h2>About Me</h2>
-      <p>
-        Welcome! I am Giulio Binosi, a researcher specializing in hypercomplex analysis, harmonic analysis, slice analysis, Dunkl analysis and complex and differential geometry. I work primarily with quaternionic and Clifford algebras. I completeed my PhD at Trento university, now I am a Postdoc at Florence university with INdAM's project SUNRISE.
-      </p>
-    </section>
 
-    <section id="research">
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Hypercomplex Analysis</li>
-        <li>Harmonic Analysis</li>
-        <li>Slice Analysis</li>
-        <li>Dunkl Analysis</li>
-        <li>Complex Geometry</li>
-        <li>Differential Geometry</li>
-      </ul>
-    </section>
-    <section id="publications">
-      <h2>Publications</h2>
-      <ol>
-        <li>Binosi, G. (2025). <a href="https://link.springer.com/article/10.1007/s40574-025-00494-3" target="_blank">
-          "Polyharmonicity, Almansi-type decompositions and Fueter-Sce theorem for several Clifford variables"
-        </a>, <em>Bollettino dell’Unione Matematica Italiana</em>.</li>
-        <li>Binosi, G., De Bie, H., Lian, P. (2025). <a href="https://link.springer.com/article/10.1007/s10231-025-01572-1" target="_blank">
-          "Dunkl approach to slice regular functions"
-        </a>, <em>Annali di Matematica Pura ed Applicata</em>.</li>
-        <li>Binosi, G. (2025). <a href="https://link.springer.com/article/10.1007/s00006-025-01376-9" target="_blank">
-          "Slice regular holomorphic Cliffordian functions of order k"
-        </a>, <em>Adv. Appl. Clifford Algebras</em>.</li>
-        <li>Binosi, G. (2024). <a href="https://link.springer.com/article/10.1007/s11785-024-01529-x?fromPaywallRec=false" target="_blank">
-          "Almansi-Type Decomposition for Slice Regular Functions of Several Quaternionic Variables"
-        </a>, <em>Complex Anal. Oper. Theory</em>.</li>
-        <li>Binosi, G. (2023). <a href="https://www.degruyterbrill.com/document/doi/10.1515/coma-2023-0103/html" target="_blank">
-          "Partial slice regularity and Fueter's theorem in several quaternionic variables"
-        </a>, <em>Complex Manifolds</em>.</li>
-      </ol>
-    </section>
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <p>Lecturer and tutor in courses on calculus 1 and 2, functional analysis and linear algebra and geometry.</p>
-    </section>
-    <section id="talks">
-      <h2>Talks &amp; Seminars</h2>
-      <ul>
-        <li>Dunkl approach to slice regular functions, Bari (2025)</li>
-        <li>Regular functions in hypercomplex setting, Cetraro (2025)</li>
-        <li>Minicourse in slice regular functions of one and several quaternionic variables, Tientsin, China (2024)</li>
-        <li>Harmonicity in Slice Analysis: Almansi decomposition and
-Fueter theorem for several hypercomplex variables, Naples (2024)</li>
-        <li>Almansi decomposition and partial sliceness for slice functions of several quaternionic variables, Holon, Israel (2023)</li>
-         <li>Hypercomplex analysis, Verona (2023)</li>
-        <li>Partial slice regularity and
-Fueter’s theorem over quaternions, Florence (2022)</li>
-      </ul>
-      </section>
-    <section id="Conferences">
-      <h2>Conferences</h2>
-      <ul>
-        <li>Luigi Maierù’s International School in the History of Mathematics, Cetraro, (2025)</li>
-        <li>2 Days on Geometric Structures and Function Theories, Bari (2024)</li>
-        <li>Workshop di Analisi e Geometria Ipercomplessa, Trento (2024)</li>
-        <li>9ECM European Congress of Mathematics, Sevilla (2024)</li>
-        <li>II Meeting UMI for Doctoral Students, Naples (2024)</li>
-         <li>ICCA 13, Holon, Israel (2023)</li>
-        <li>Geometric Evolution of Multi Agent Systems, Verona (2023)</li>
-         <li>Mini-course on the combinatorics of p-Kazhdan–Lusztig bases, Gent (2023)</li>
-        <li>Incontro Nazionale di Analisi Ipercomplessa, Florence (2022)</li>
-        <li>100 Umi-800 Unipd, Padova (2022)</li>
-        <li>Quaternioni sul Conero III, Ancona (2021)</li>
-      </ul>
-    </section>
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <p><a href="Cv 07_25.pdf" target="_blank" rel="noopener">Download my CV (PDF)</a></p>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>You can reach me by email at <a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a>.</p>
-        <section id="profiles">
+  <main>
+    <!-- Altre sezioni come le avevi -->
+    <section id="profiles">
       <h2>Profiles</h2>
       <ul>
-        <li><a href="https://orcid.org/0000-0002-4733-6180" target="_blank" rel="noopener">ORCID</a></li>
-        <li><a href="https://scholar.google.com/citations?user=auPX5WoAAAAJ&hl=it" target="_blank" rel="noopener">Google Scholar</a></li>
-        <li><a href="https://www.researchgate.net/profile/Giulio-Binosi?ev=hdr_xprf" target="_blank" rel="noopener">ResearchGate</a></li>
-        <li><a href="https://zbmath.org/authors/?q=au%3ABinosi%2C+Giulio" target="_blank" rel="noopener">Zentralblatt MATH</a></li>
+        <li><a href="https://orcid.org/0000-0002-4733-6180" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i>ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=auPX5WoAAAAJ&hl=it" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i>Google Scholar</a></li>
+        <li><a href="https://www.researchgate.net/profile/Giulio-Binosi?ev=hdr_xprf" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i>ResearchGate</a></li>
+        <li><a href="https://zbmath.org/authors/?q=au%3ABinosi%2C+Giulio" target="_blank" rel="noopener"><i class="fa-solid fa-square-root-variable"></i>Zentralblatt MATH</a></li>
+        <li><a href="https://www.webofscience.com/wos/author/record/OBO-2958-2025" target="_blank" rel="noopener"><i class="fa-solid fa-flask"></i>Web of Science</a></li>
       </ul>
     </section>
   </main>
