@@ -2,39 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulio Binosi - Personal Website</title>
+  <title>Giulio Binosi</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      display: flex;
     }
 
-    header {
+    /* Menù laterale */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
       background: #333;
-      color: #fff;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding-top: 20px;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px;
+      text-decoration: none;
     }
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.1rem;
+    .sidebar a:hover {
+      background: #575757;
     }
 
-    main {
+    /* Contenuto principale */
+    .content {
+      margin-left: 200px; /* spazio per il menù */
       padding: 20px;
-      max-width: 900px;
-      margin: 0 auto;
+      flex: 1;
+    }
+
+    /* Sezioni nascoste */
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    /* Foto a destra */
+    .profile-pic {
+      float: right;
+      width: 150px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#" onclick="showSection('about')">About Me</a>
+    <a href="#" onclick="showSection('research')">Research</a>
+    <a href="#" onclick="showSection('publications')">Publications</a>
+    <a href="#" onclick="showSection('teaching')">Teaching</a>
+    <a href="#" onclick="showSection('talks')">Talks & Seminars</a>
+    <a href="#" onclick="showSection('conferences')">Conferences</a>
+    <a href="#" onclick="showSection('cv')">CV</a>
+    <a href="#" onclick="showSection('profiles')">Profiles</a>
+  </div>
+
+  <!-- Contenuto -->
+  <div class="content">
+    <img src="your-photo.jpg" alt="Profile photo" class="profile-pic">
+
+    <div id="about" class="section active">
+      <h1>About Me</h1>
+      <p>Here goes your About Me text.</p>
+    </div>
+
+    <div id="research" class="section">
+      <h1>Research</h1>
+      <p>Research description here.</p>
+    </div>
+
+    <div id="publications" class="section">
+      <h1>Publications</h1>
+      <p>List of publications.</p>
+    </div>
+
+    <div id="teaching" class="section">
+      <h1>Teaching</h1>
+      <p>Teaching details here.</p>
+    </div>
+
+    <div id="talks" class="section">
+      <h1>Talks & Seminars</h1>
+      <p>Talks and seminars info.</p>
+    </div>
+
+    <div id="conferences" class="section">
+      <h1>Conferences</h1>
+      <p>Conferences info.</p>
+    </div>
+
+    <div id="cv" class="section">
+      <h1>CV</h1>
+      <p>Link to CV or text here.</p>
+    </div>
+
+    <div id="profiles" class="section">
+      <h1>Profiles</h1>
+      <p>Links to your Orcid, Google Scholar, etc.</p>
+    </div>
+  </div>
+
+  <!-- Script per navigazione -->
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>      margin: 0 auto;
     }
 
     section {
