@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="_sIAHdGjLCQCnU4Wj7z0f681B9DFwLFtnOHFnoEEjv4" />
-  <meta name="description" content="Giulio Binosi - Researcher in Mathematics at INdAM. Expertise in quaternionic analysis, Dunkl operators, and hypercomplex analysis.">
-  <meta name="keywords" content="Giulio Binosi, Mathematics, Quaternionic Analysis, Dunkl Operators, Hypercomplex Analysis">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Giulio Binosi – Academic Website</title>
@@ -22,19 +19,131 @@
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      min-height: 100vh;
     }
-    header.with-image {
+    /* NAV laterale */
+    nav {
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1rem;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+    }
+    nav a {
+      color: var(--background-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-color);
+    }
+    /* Contenuto principale */
+    main {
+      padding: 2rem;
+      max-width: 900px;
+    }
+    main header {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
-      padding: 2rem 1rem;
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      justify-content: flex-end;
+      margin-bottom: 2rem;
     }
-    header.with-image img {
+    main header img {
       width: 150px;
       height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    main header div {
+      margin-right: auto;
+      text-align: left;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      border-top: 1px solid var(--primary-color);
+      margin-top: 4rem;
+    }
+    a.email-link {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+    #profiles ul {
+      list-style: none;
+      padding: 0;
+    }
+    #profiles li {
+      margin: 0.5rem 0;
+    }
+    #profiles i {
+      margin-right: 8px;
+      color: var(--secondary-color);
+      transition: all 0.3s ease;
+    }
+    #profiles a:hover i {
+      color: var(--primary-color);
+      text-shadow: 0 0 6px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV laterale -->
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#talks">Talks &amp; Seminars</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#cv">CV</a>
+    <a href="#profiles">Profiles</a>
+  </nav>
+
+  <!-- Contenuto -->
+  <main>
+    <header>
+      <div>
+        <h1>Giulio Binosi</h1>
+        <p>INdAM</p>
+        <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+      </div>
+      <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Welcome! I am Giulio Binosi, a researcher specializing in hypercomplex analysis, harmonic analysis, slice analysis, Dunkl analysis and complex and differential geometry. I work primarily with quaternionic and Clifford algebras. I completed my PhD at Trento University, now I am a Postdoc at Florence University with INdAM's project SUNRISE.</p>
+    </section>
+
+    <!-- resto dei contenuti invariato -->
+    ...
+    
+    <footer>
+      &copy; 2025 Giulio Binosi. All rights reserved.
+    </footer>
+  </main>
+
+</body>
+</html>      height: auto;
       margin: 0;
     }
     header.with-image div {
