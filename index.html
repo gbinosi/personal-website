@@ -1,40 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Giulio Binosi – Academic Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giulio Binosi - Personal Website</title>
   <style>
-    :root {
-      --primary-color: #d2b48c;
-      --text-color: #3a3a3a;
-      --background-color: #fffefa;
-      --secondary-color: #5a4b3b;
-      --link-color: #7a6a53;
-    }
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      display: grid;
-      grid-template-columns: 220px 1fr;
-      min-height: 100vh;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
     }
-    /* NAV laterale */
-    nav {
-      background-color: var(--secondary-color);
-      color: var(--background-color);
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.1rem;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+    }
+
+    .social-links {
       display: flex;
-      flex-direction: column;
-      padding: 2rem 1rem;
-      gap: 1rem;
-      position: sticky;
-      top: 0;
-      height: 100vh;
+      gap: 15px;
+      margin-top: 15px;
     }
+
+    .social-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1.4rem;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #0077b5; /* blu neutro */
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+
+  <!-- Font Awesome per le icone -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Giulio Binosi</h1>
+    <p>INdAM</p>
+    <p>Email: <a href="mailto:binosi@altamatematica.it" style="color: #fff;">binosi@altamatematica.it</a></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>I am a postdoctoral researcher in mathematics at the Department of Mathematics, University of Florence, under the supervision of Caterina Stoppato. My research focuses on hypercomplex analysis, with particular emphasis on Dunkl operators and quaternionic analysis.</p>
+    </section>
+
+    <section>
+      <h2>Profiles</h2>
+      <div class="social-links">
+        <a href="https://orcid.org/0000-0003-1730-8017" target="_blank"><i class="fab fa-orcid"></i></a>
+        <a href="https://scholar.google.com/citations?user=auPX5WoAAAAJ&hl=it" target="_blank"><i class="fab fa-google"></i></a>
+        <a href="https://www.researchgate.net/profile/Giulio-Binosi" target="_blank"><i class="fab fa-researchgate"></i></a>
+        <a href="https://zbmath.org/authors/?q=au%3ABinosi%2C+Giulio" target="_blank"><i class="fas fa-square-root-alt"></i></a>
+        <a href="https://www.webofscience.com/wos/author/record/OBO-2958-2025" target="_blank"><i class="fas fa-flask"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Giulio Binosi</p>
+  </footer>
+</body>
+</html>    }
     nav a {
       color: var(--background-color);
       text-decoration: none;
