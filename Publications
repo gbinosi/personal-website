@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications - Giulio Binosi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #d2b48c;
+      --text-color: #3a3a3a;
+      --background-color: #fffefa;
+      --secondary-color: #5a4b3b;
+      --link-color: #7a6a53;
+      --sidebar-width: 280px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      display: flex;
+      min-height: 100vh;
+    }
+    
+    /* Sidebar styling */
+    .sidebar {
+      width: var(--sidebar-width);
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      z-index: 1000;
+    }
+    
+    .profile {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+    
+    .profile h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: var(--background-color);
+    }
+    
+    .profile p {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .profile a.email-link {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .profile a.email-link:hover {
+      color: var(--background-color);
+      text-decoration: underline;
+    }
+    
+    .menu ul {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    
+    .menu li {
+      margin-bottom: 0.8rem;
+    }
+    
+    .menu a {
+      color: var(--background-color);
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .menu a:hover, .menu a.active {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+    
+    /* Main content styling */
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 2rem 3rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    section h2 {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
+    /* Stile per i link nelle pubblicazioni */
+    .publications a {
+      color: var(--link-color);
+      text-decoration: underline;
+      transition: color 0.2s ease, background-color 0.2s ease;
+    }
+    
+    .publications a:hover {
+      color: var(--primary-color);
+      background-color: rgba(210, 180, 140, 0.15);
+    }
+    
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      border-top: 1px solid var(--primary-color);
+      margin-top: 4rem;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 992px) {
+      body {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+      }
+      
+      .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+      }
+      
+      .profile img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .main-content {
+        padding: 1rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar with menu -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
+      <h1>Giulio Binosi</h1>
+      <p>INdAM</p>
+      <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+    </div>
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html" class="active">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="talks.html">Talks &amp; seminars</a></li>
+        <li><a href="conferences.html">Conferences</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="main-content">
+    <section class="publications">
+      <h2>Publications</h2>
+      <ol>
+        <li>Binosi, G. (2025). <a href="https://link.springer.com/article/10.1007/s40574-025-00494-3" target="_blank">
+          "Polyharmonicity, Almansi-type decompositions and Fueter-Sce theorem for several Clifford variables"
+        </a>, <em>Bollettino dell'Unione Matematica Italiana</em>.</li>
+        <li>Binosi, G., De Bie, H., Lian, P. (2025). <a href="https://link.springer.com/article/10.1007/s10231-025-01572-1" target="_blank">
+          "Dunkl approach to slice regular functions"
+        </a>, <em>Annali di Matematica Pura ed Applicata</em>.</li>
+        <li>Binosi, G. (2025). <a href="https://link.springer.com/article/10.1007/s00006-025-01376-9" target="_blank">
+          "Slice regular holomorphic Cliffordian functions of order k"
+        </a>, <em>Adv. Appl. Clifford Algebras</em>.</li>
+        <li>Binosi, G. (2024). <a href="https://link.springer.com/article/10.1007/s11785-024-01529-x?fromPaywallRec=false" target="_blank">
+          "Almansi-Type Decomposition for Slice Regular Functions of Several Quaternionic Variables"
+        </a>, <em>Complex Anal. Oper. Theory</em>.</li>
+        <li>Binosi, G. (2023). <a href="https://www.degruyterbrill.com/document/doi/10.1515/coma-2023-0103/html" target="_blank">
+          "Partial slice regularity and Fueter's theorem in several quaternionic variables"
+        </a>, <em>Complex Manifolds</em>.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Giulio Binosi. All rights reserved.
+  </footer>
+</body>
+</html>
