@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talks & Seminars - Giulio Binosi</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-color: #d2b48c;
+      --text-color: #3a3a3a;
+      --background-color: #fffefa;
+      --secondary-color: #5a4b3b;
+      --link-color: #7a6a53;
+    }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    header.with-image {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header.with-image img {
+      width: 150px;
+      height: auto;
+      margin: 0;
+    }
+    header.with-image div {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin-left: -3cm;
+    }
+    nav {
+      background-color: var(--secondary-color);
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a {
+      color: var(--background-color);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--primary-color);
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      color: var(--secondary-color);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      border-top: 1px solid var(--primary-color);
+      margin-top: 4rem;
+    }
+    a.email-link {
+      color: var(--link-color);
+      text-decoration: underline;
+    }
+    .talk-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dotted #d2b48c;
+    }
+    .talk-title {
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+    .talk-location {
+      font-style: italic;
+    }
+    .talk-date {
+      color: var(--link-color);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="with-image" id="headerWithImage" style="display:flex;">
+    <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
+    <div>
+      <h1>Giulio Binosi</h1>
+      <p>INdAM</p>
+      <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="talks.html">Talks &amp; seminars</a>
+    <a href="conferences.html">Conferences</a>
+    <a href="cv.html">CV</a>
+    <a href="profiles-contacts.html">Profiles &amp; Contacts</a>
+  </nav>
+
+  <main>
+    <section id="talks">
+      <h2>Talks &amp; Seminars</h2>
+      
+      <div class="talk-item">
+        <div class="talk-title">Dunkl approach to slice regular functions</div>
+        <div class="talk-location">Bari, Italy</div>
+        <div class="talk-date">2025</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Regular functions in hypercomplex setting</div>
+        <div class="talk-location">Cetraro, Italy</div>
+        <div class="talk-date">2025</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Minicourse in slice regular functions of one and several quaternionic variables</div>
+        <div class="talk-location">Tientsin, China</div>
+        <div class="talk-date">2024</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Harmonicity in Slice Analysis: Almansi decomposition and Fueter theorem for several hypercomplex variables</div>
+        <div class="talk-location">Naples, Italy</div>
+        <div class="talk-date">2024</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Almansi decomposition and partial sliceness for slice functions of several quaternionic variables</div>
+        <div class="talk-location">Holon, Israel</div>
+        <div class="talk-date">2023</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Hypercomplex analysis</div>
+        <div class="talk-location">Verona, Italy</div>
+        <div class="talk-date">2023</div>
+      </div>
+      
+      <div class="talk-item">
+        <div class="talk-title">Partial slice regularity and Fueter's theorem over quaternions</div>
+        <div class="talk-location">Florence, Italy</div>
+        <div class="talk-date">2022</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Giulio Binosi. All rights reserved.
+  </footer>
+</body>
+</html>
