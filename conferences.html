@@ -1,207 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="_sIAHdGjLCQCnU4Wj7z0f681B9DFwLFtnOHFnoEEjv4" />
-  <meta name="description" content="Giulio Binosi - Conferences. Participation in mathematical conferences and workshops.">
-  <meta name="keywords" content="Giulio Binosi, Conferences, Mathematics, Workshops">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conferences - Giulio Binosi</title>
+  <title>Conferences – Giulio Binosi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    :root {
-      --primary-color: #d2b48c;
-      --text-color: #3a3a3a;
-      --background-color: #fffefa;
-      --secondary-color: #5a4b3b;
-      --link-color: #7a6a53;
-      --sidebar-width: 280px;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-      display: flex;
-      min-height: 100vh;
-    }
-    
-    /* Sidebar styling */
-    .sidebar {
-      width: var(--sidebar-width);
-      background-color: var(--secondary-color);
-      color: var(--background-color);
-      position: fixed;
-      height: 100vh;
-      overflow-y: auto;
-      padding: 2rem 1.5rem;
-      display: flex;
-      flex-direction: column;
-      z-index: 1000;
-    }
-    
-    .profile {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    
-    .profile img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid var(--primary-color);
-      margin-bottom: 1.5rem;
-    }
-    
-    .profile h1 {
-      font-size: 1.8rem;
-      margin-bottom: 极速5rem;
-      color: var(--background-color);
-    }
-    
-    .profile p {
-      margin-bottom: 0.5rem;
-      color: var(--primary-color);
-    }
-    
-    .profile a.email-link {
-      color: var(--primary-color);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .profile a.email-link:hover {
-      color: var(--background-color);
-      text-decoration: underline;
-    }
-    
-    .menu ul {
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-    
-    .menu li {
-      margin-bottom: 0.8rem;
-    }
-    
-    .menu a {
-     极速 color: var(--background-color);
-      text-decoration: none;
-      font-weight: 500;
-      display: block;
-      padding: 0.6rem 1rem;
-      border-radius: 4px;
-      transition: all 0.3s ease;
-    }
-    
-    .menu a:hover, .menu a.active {
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-    }
-    
-    /* Main content styling */
-    .main-content {
-      flex: 1;
-      margin-left: var(--sidebar-width);
-      padding: 2rem 3rem;
-    }
-    
-    section {
-      margin-bottom: 3rem;
-      padding: 2rem;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-    
-    section h2 {
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      color: var(--secondary-color);
-    }
-    
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--secondary-color);
-      border-top: 1px solid var(--primary-color);
-      margin-top: 4rem;
-    }
-    
-    /* Conferences specific styling */
-    .conference-item {
-      margin-bottom: 1.8rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px dotted var(--primary-color);
-    }
-    
-    .conference-title {
-      font-weight: bold;
-      color: var(--secondary-color);
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-    
-    .conference-location {
-      font-style: italic;
-      margin-bottom: 0.3rem;
-    }
-    
-    .conference-date {
-      color: var(--link-color);
-      font-size: 0.9rem;
-    }
-    
-    /* Responsive design */
-    @media (max-width: 992px) {
-      body {
-        flex-direction: column;
-      }
-      
-      .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding: 1.5rem;
-      }
-      
-      .main-content {
-        margin-left: 0;
-        padding: 1.5rem;
-      }
-      
-      .profile img {
-        width: 150px;
-        height: 150px;
-      }
-    }
-    
-    @media (max-width: 576px) {
-      .main-content {
-        padding: 1rem;
-      }
-      
-      section {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css"> <!-- Usa lo stesso foglio di stile -->
 </head>
 <body>
 
-  <!-- Sidebar with menu -->
+  <!-- Sidebar -->
   <aside class="sidebar">
-    <div class极速="profile">
+    <div class="profile">
       <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
       <h1>Giulio Binosi</h1>
       <p>INdAM</p>
@@ -225,80 +35,22 @@
 
   <!-- Main content -->
   <main class="main-content">
-    <section>
-      <h2>Conferences Attended</h2>
-      
-      <div class="conference-item">
-        <div class="conference-title">Luigi Maierù's International School in the History of Mathematics</div>
-        <div class="conference-location">Cetraro, Italy</div>
-        <div class="conference-date">2025</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">2 Days on Geometric Structures and Function Theories</div>
-        <div class="conference-location">Bari, Italy</div>
-        <div class="conference-date">2024</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">Workshop di Analisi e Geometria Ipercomplessa</div>
-        <div class="conference-location">Trento, Italy</div>
-        <div class="conference-date">2024</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">9ECM European Congress of Mathematics</div>
-        <div class="conference-location">Sevilla, Spain</div>
-        <div class="conference-date">2024</div>
-      </div>
-      
-      <div class="conference-item">
-        <极速div class="conference-title">II Meeting UMI for Doctoral Students</div>
-        <div class="conference-location">Naples, Italy</div>
-        <div class="conference-date">2024</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">ICCA 13</div>
-        <div class="conference-location">Holon, Israel</div>
-        <div class="conference-date">2023</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">Geometric Evolution of Multi Agent Systems</div>
-        <div class="conference-location">Verona, Italy</div>
-        <div class="conference-date">2023</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">Mini-course on the combinatorics of p-Kazhdan–Lusztig bases</div>
-        <div class="conference-location">Gent, Belgium</div>
-        <div class="conference-date">2023</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">New trends in Quaternions and Octonions</div>
-        <div class="conference-location">Portugal</div>
-        <div class="conference-date">2022</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">Incontro Nazionale di Analisi Ipercomplessa</div>
-        <div class="conference-location">Florence, Italy</div>
-        <div class="conference-date">2022</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">100 Umi-800 Unipd</div>
-        <div class="conference-location">Padova, Italy</div>
-        <div class="conference-date">2022</div>
-      </div>
-      
-      <div class="conference-item">
-        <div class="conference-title">Quaternioni sul Conero III</div>
-        <div class="conference-location">Ancona, Italy</div>
-        <div class="conference-date">2021</div>
-      </div>
+    <section id="conferences">
+      <h2>Conferences</h2>
+      <ul>
+        <li>Luigi Maierù’s International School in the History of Mathematics, Cetraro (2025)</li>
+        <li>2 Days on Geometric Structures and Function Theories, Bari (2024)</li>
+        <li>Workshop di Analisi e Geometria Ipercomplessa, Trento (2024)</li>
+        <li>9ECM European Congress of Mathematics, Sevilla (2024)</li>
+        <li>II Meeting UMI for Doctoral Students, Naples (2024)</li>
+        <li>ICCA 13, Holon, Israel (2023)</li>
+        <li>Geometric Evolution of Multi Agent Systems, Verona (2023)</li>
+        <li>Mini-course on the combinatorics of p-Kazhdan–Lusztig bases, Gent (2023)</li>
+        <li>New trends in Quaternions and Octonions, Portugal (2022)</li>
+        <li>Incontro Nazionale di Analisi Ipercomplessa, Florence (2022)</li>
+        <li>100 Umi – 800 Unipd, Padova (2022)</li>
+        <li>Quaternioni sul Conero III, Ancona (2021)</li>
+      </ul>
     </section>
   </main>
 
