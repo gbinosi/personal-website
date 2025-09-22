@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="google-site-verification" content="_sIAHdGjLCQCnU4Wj7z0f681B9DFwLFtnOHFnoEEjv4" />
+  <meta name="description" content="Giulio Binosi - Curriculum Vitae. Academic background, research interests, and professional experience.">
+  <meta name="keywords" content="Giulio Binosi, CV, Curriculum Vitae, Mathematics, Hypercomplex Analysis">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Curriculum Vitae - Giulio Binosi</title>
+  <title>CV - Giulio Binosi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
@@ -12,195 +15,384 @@
       --background-color: #fffefa;
       --secondary-color: #5a4b3b;
       --link-color: #7a6a53;
+      --sidebar-width: 280px;
     }
-    body {
+    
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
-    }
-    header.with-image {
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      padding: 2rem 1rem;
-      background-color: var(--primary-color);
-      color: var(--secondary-color);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      min-height: 100vh;
     }
-    header.with-image img {
-      width: 150px;
-      height: auto;
-      margin: 0;
-    }
-    header.with-image div {
-      flex-grow: 1;
+    
+    /* Sidebar styling */
+    .sidebar {
+      width: var(--sidebar-width);
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      z-index: 1000;
+    }
+    
+    .profile {
       text-align: center;
-      margin-left: -3cm;
+      margin-bottom: 2rem;
     }
-    nav {
-      background-color: var(--secondary-color);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      font-weight: 600;
-      font-size: 1rem;
+    
+    .profile img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--primary-color);
+      margin-bottom: 1.5rem;
     }
-    nav a {
+    
+    .profile h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
       color: var(--background-color);
+    }
+    
+    .profile p {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .profile a.email-link {
+      color: var(--primary-color);
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: var(--primary-color);
+    
+    .profile a.email-link:hover {
+      color: var(--background-color);
+      text-decoration: underline;
     }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    
+    .menu ul {
+      list-style: none;
+      margin-top: 1.5rem;
     }
-    section {
-      margin-bottom: 3rem;
+    
+    .menu li {
+      margin-bottom: 0.8rem;
     }
-    section h2 {
-      border-bottom: 2px solid var(--primary-color);
-      padding-bottom: 0.3rem;
-      margin-bottom: 1rem;
+    
+    .menu a {
+      color: var(--background-color);
+      text-decoration: none;
+      font-weight: 500;
+      display: block;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+    
+    .menu a:hover, .menu a.active {
+      background-color: var(--primary-color);
       color: var(--secondary-color);
     }
+    
+    /* Main content styling */
+    .main-content {
+      flex: 1;
+      margin-left: var(--sidebar-width);
+      padding: 2rem 3rem;
+    }
+    
+    section {
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    section h2 {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       font-size: 0.9rem;
       color: var(--secondary-color);
       border-top: 1px solid var(--primary-color);
       margin-top: 4rem;
     }
-    a.email-link {
-      color: var(--link-color);
-      text-decoration: underline;
-    }
+    
+    /* CV specific styling */
     .cv-section {
       margin-bottom: 2rem;
     }
+    
     .cv-section h3 {
       color: var(--secondary-color);
-      border-bottom: 1px solid var(--primary-color);
-      padding-bottom: 0.2rem;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
     }
-    .cv-download {
-      text-align: center;
-      margin: 2rem 0;
-      padding: 1rem;
-      background-color: rgba(210, 180, 140, 0.1);
-      border-radius: 5px;
+    
+    .cv-item {
+      margin-bottom: 1.5rem;
+    }
+    
+    .cv-item-title {
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
+    
+    .cv-item-date {
+      color: var(--link-color);
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    
+    .cv-item-details {
+      margin-top: 0.5rem;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 0.7rem 1.5rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+    
+    .download-btn:hover {
+      background-color: var(--secondary-color);
+      color: var(--background-color);
+    }
+    
+    /* Contact specific styling */
+    .contact-info {
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-info h3 {
+      color: var(--secondary-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .contact-item {
+      flex: 1;
+      min-width: 250px;
+    }
+    
+    .contact-item i {
+      color: var(--primary-color);
+      margin-right: 0.5rem;
+      width: 20px;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 992px) {
+      body {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 1.5rem;
+      }
+      
+      .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+      }
+      
+      .profile img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    
+    @media (max-width: 576px) {
+      .main-content {
+        padding: 1rem;
+      }
+      
+      section {
+        padding: 1.5rem;
+      }
+      
+      .contact-details {
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header class="with-image" id="headerWithImage" style="display:flex;">
-    <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
-    <div>
+  <!-- Sidebar with menu -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="Fotoprofilo.jpeg" alt="Foto di Giulio Binosi" />
       <h1>Giulio Binosi</h1>
       <p>INdAM</p>
       <p><a class="email-link" href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
     </div>
-  </header>
+    
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="talks.html">Talks &amp; seminars</a></li>
+        <li><a href="conferences.html">Conferences</a></li>
+        <li><a href="cv.html" class="active">CV</a></li>
+        <li><a href="profiles.html">Profiles</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="talks.html">Talks &amp; seminars</a>
-    <a href="conferences.html">Conferences</a>
-    <a href="cv.html">CV</a>
-    <a href="profiles-contacts.html">Profiles &amp; Contacts</a>
-  </nav>
-
-  <main>
-    <section id="cv">
+  <!-- Main content -->
+  <main class="main-content">
+    <section>
       <h2>Curriculum Vitae</h2>
-      
-      <div class="cv-download">
-        <p><a href="Cv_07_25.pdf" target="_blank" rel="noopener">Download my complete CV (PDF)</a></p>
-      </div>
       
       <div class="cv-section">
         <h3>Education</h3>
-        <p><strong>PhD in Mathematics</strong><br>
-        Trento University<br>
-        [Years of attendance]</p>
         
-        <p><strong>Master's Degree in Mathematics</strong><br>
-        [University Name]<br>
-        [Years of attendance]</p>
+        <div class="cv-item">
+          <div class="cv-item-title">PhD in Mathematics</div>
+          <div class="cv-item-date">2021 - Present</div>
+          <div class="cv-item-details">University of [Institution], [Location]</div>
+        </div>
         
-        <p><strong>Bachelor's Degree in Mathematics</strong><br>
-        [University Name]<br>
-        [Years of attendance]</p>
+        <div class="cv-item">
+          <div class="cv-item-title">Master's Degree in Mathematics</div>
+          <div class="cv-item-date">2019 - 2021</div>
+          <div class="cv-item-details">University of [Institution], [Location]</div>
+        </div>
+        
+        <div class="cv-item">
+          <div class="cv-item-title">Bachelor's Degree in Mathematics</div>
+          <div class="cv-item-date">2016 - 2019</div>
+          <div class="cv-item-details">University of [Institution], [Location]</div>
+        </div>
       </div>
       
       <div class="cv-section">
-        <h3>Professional Experience</h3>
-        <p><strong>Postdoctoral Researcher</strong><br>
-        Florence University - INdAM SUNRISE Project<br>
-        [Start date] - Present</p>
+        <h3>Research Experience</h3>
         
-        <p><strong>Research Fellow</strong><br>
-        [Previous Institution]<br>
-        [Dates]</p>
+        <div class="cv-item">
+          <div class="cv-item-title">INdAM Fellow</div>
+          <div class="cv-item-date">2023 - Present</div>
+          <div class="cv-item-details">Research on hypercomplex analysis and Dunkl operators</div>
+        </div>
+        
+        <div class="cv-item">
+          <div class="cv-item-title">Research Assistant</div>
+          <div class="cv-item-date">2021 - 2023</div>
+          <div class="cv-item-details">Department of Mathematics, University of [Institution]</div>
+        </div>
       </div>
       
       <div class="cv-section">
-        <h3>Research Projects</h3>
-        <p><strong>SUNRISE Project</strong><br>
-        INdAM - Istituto Nazionale di Alta Matematica<br>
-        Focus on hypercomplex analysis, harmonic analysis, and slice analysis</p>
+        <h3>Teaching Experience</h3>
+        
+        <div class="cv-item">
+          <div class="cv-item-title">Teaching Assistant - Advanced Mathematics</div>
+          <div class="cv-item-date">2022 - Present</div>
+          <div class="cv-item-details">University of [Institution]</div>
+        </div>
+        
+        <div class="cv-item">
+          <div class="cv-item-title">Tutor - Calculus I & II</div>
+          <div class="cv-item-date">2020 - 2022</div>
+          <div class="cv-item-details">University of [Institution]</div>
+        </div>
       </div>
       
       <div class="cv-section">
         <h3>Research Interests</h3>
         <ul>
           <li>Hypercomplex Analysis</li>
+          <li>Slice Regular Functions</li>
+          <li>Dunkl Operators</li>
+          <li>Quaternionic and Clifford Analysis</li>
           <li>Harmonic Analysis</li>
-          <li>Slice Analysis</li>
-          <li>Dunkl Analysis</li>
-          <li>Complex Geometry</li>
-          <li>Differential Geometry</li>
         </ul>
       </div>
       
       <div class="cv-section">
-        <h3>Skills</h3>
+        <h3>Languages</h3>
         <ul>
-          <li>Mathematical Research: Hypercomplex Analysis, Harmonic Analysis, Slice Analysis</li>
-          <li>Programming: [List relevant programming languages/tools]</li>
-          <li>Software: [List relevant mathematical software]</li>
-          <li>Languages: Italian (Native), English (Fluent), [Other languages]</li>
+          <li>Italian (Native)</li>
+          <li>English (Fluent)</li>
+          <li>French (Basic)</li>
         </ul>
       </div>
       
-      <div class="cv-section">
-        <h3>Awards and Honors</h3>
-        <ul>
-          <li>[Award name], [Year]</li>
-          <li>[Fellowship name], [Year]</li>
-          <li>[Grant name], [Year]</li>
-        </ul>
-      </div>
+      <a href="cv-binosi.pdf" class="download-btn" download>
+        <i class="fas fa-download"></i> Download Full CV (PDF)
+      </a>
+    </section>
+    
+    <section>
+      <h2>Contact Information</h2>
       
-      <div class="cv-section">
-        <h3>Teaching Experience</h3>
-        <p>Lecturer and tutor in courses on:</p>
-        <ul>
-          <li>Calculus 1 and 2</li>
-          <li>Functional analysis</li>
-          <li>Linear algebra and geometry</li>
-        </ul>
+      <div class="contact-details">
+        <div class="contact-item">
+          <h3>Address</h3>
+          <p><i class="fas fa-map-marker-alt"></i> Department of Mathematics<br>
+          University of [Institution]<br>
+          [Address]<br>
+          [City, Country]</p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>Email</h3>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:binosi@altamatematica.it">binosi@altamatematica.it</a></p>
+          
+          <h3>Phone</h3>
+          <p><i class="fas fa-phone"></i> +39 [Phone Number]</p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>Office Hours</h3>
+          <p><i class="fas fa-clock"></i> By appointment</p>
+          
+          <h3>Social Profiles</h3>
+          <p>
+            <a href="#" style="color: var(--link-color); margin-right: 10px;"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="#" style="color: var(--link-color); margin-right: 10px;"><i class="fab fa-researchgate"></i> ResearchGate</a>
+            <a href="#" style="color: var(--link-color);"><i class="ai ai-google-scholar"></i> Google Scholar</a>
+          </p>
+        </div>
       </div>
     </section>
   </main>
