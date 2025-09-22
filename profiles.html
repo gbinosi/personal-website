@@ -138,46 +138,40 @@
       margin-top: 4rem;
     }
     
-    /* Profiles specific styling */
+    /* Profiles specific styling - COMPACT VERSION */
     .profiles-list {
       list-style: none;
+      padding: 0;
     }
     
-    .profile-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px dotted var(--primary-color);
+    .profiles-list li {
+      margin: 0.8rem 0;
     }
     
-    .profile-link {
+    .profiles-list a {
       display: flex;
       align-items: center;
       text-decoration: none;
       color: var(--secondary-color);
       transition: all 0.3s ease;
+      padding: 0.5rem 0;
     }
     
-    .profile-link:hover {
+    .profiles-list a:hover {
       color: var(--primary-color);
     }
     
-    .profile-icon {
-      font-size: 1.5rem;
-      width: 40px;
-      margin-right: 1rem;
+    .profiles-list i {
+      margin-right: 12px;
+      width: 24px;
       text-align: center;
+      font-size: 1.2rem;
+      color: var(--secondary-color);
+      transition: all 0.3s ease;
     }
     
-    .profile-name {
-      font-weight: bold;
-      font-size: 1.1rem;
-    }
-    
-    .profile-description {
-      margin-left: 3rem;
-      color: var(--text-color);
-      font-size: 0.9rem;
-      margin-top: 0.3rem;
+    .profiles-list a:hover i {
+      color: var(--primary-color);
     }
     
     /* Contact specific styling */
@@ -287,19 +281,6 @@
       section {
         padding: 1.5rem;
       }
-      
-      .profile-link {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      
-      .profile-icon {
-        margin-bottom: 0.5rem;
-      }
-      
-      .profile-description {
-        margin-left: 0;
-      }
     }
   </style>
 </head>
@@ -335,101 +316,14 @@
       <h2>Academic Profiles</h2>
       
       <ul class="profiles-list">
-        <li class="profile-item">
-          <a href="https://orcid.org/0000-0002-4733-6180" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-brands fa-orcid"></i>
-            </div>
-            <div class="profile-name">ORCID</div>
-          </a>
-          <div class="profile-description">
-            Unique identifier for researchers with profile 0000-0002-4733-6180
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://scholar.google.com/citations?user=auPX5WoAAAAJ&hl=it" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-brands fa-google"></i>
-            </div>
-            <div class="profile-name">Google Scholar</div>
-          </a>
-          <div class="profile-description">
-            Citations and academic publications profile
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://www.researchgate.net/profile/Giulio-Binosi?ev=hdr_xprf" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-brands fa-researchgate"></i>
-            </div>
-            <div class="profile-name">ResearchGate</div>
-          </a>
-          <div class="profile-description">
-            Professional network for scientists and researchers
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://zbmath.org/authors/?q=au%3ABinosi%2C+Giulio" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-solid fa-square-root-variable"></i>
-            </div>
-            <div class="profile-name">Zentralblatt MATH</div>
-          </a>
-          <div class="profile-description">
-            Database for mathematics publications and reviews
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://www.webofscience.com/wos/author/record/OBO-2958-2025" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-solid fa-flask"></i>
-            </div>
-            <div class="profile-name">Web of Science</div>
-          </a>
-          <div class="profile-description">
-            Citation indexing service for scientific literature
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://arxiv.org/search/?searchtype=author&query=Binosi%2C+G" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-solid fa-file-lines"></i>
-            </div>
-            <div class="profile-name">arXiv</div>
-          </a>
-          <div class="profile-description">
-            Preprint repository for scientific papers
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://www.scopus.com/authid/detail.uri?authorId=YourScopusID" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="profile-name">Scopus</div>
-          </a>
-          <div class="profile-description">
-            Abstract and citation database of peer-reviewed literature
-          </div>
-        </li>
-        
-        <li class="profile-item">
-          <a href="https://www.linkedin.com/in/giulio-binosi" target="_blank" rel="noopener" class="profile-link">
-            <div class="profile-icon">
-              <i class="fa-brands fa-linkedin"></i>
-            </div>
-            <div class="profile-name">LinkedIn</div>
-          </a>
-          <div class="profile-description">
-            Professional networking platform
-          </div>
-        </li>
+        <li><a href="https://orcid.org/0000-0002-4733-6180" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i>ORCID</a></li>
+        <li><a href="https://scholar.google.com/citations?user=auPX5WoAAAAJ&hl=it" target="_blank" rel="noopener"><i class="fa-brands fa-google"></i>Google Scholar</a></li>
+        <li><a href="https://www.researchgate.net/profile/Giulio-Binosi?ev=hdr_xprf" target="_blank" rel="noopener"><i class="fa-brands fa-researchgate"></i>ResearchGate</a></li>
+        <li><a href="https://zbmath.org/authors/?q=au%3ABinosi%2C+Giulio" target="_blank" rel="noopener"><i class="fa-solid fa-square-root-variable"></i>Zentralblatt MATH</a></li>
+        <li><a href="https://www.webofscience.com/wos/author/record/OBO-2958-2025" target="_blank" rel="noopener"><i class="fa-solid fa-flask"></i>Web of Science</a></li>
+        <li><a href="https://arxiv.org/search/?searchtype=author&query=Binosi%2C+G" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i>arXiv</a></li>
+        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=YourScopusID" target="_blank" rel="noopener"><i class="fa-solid fa-magnifying-glass"></i>Scopus</a></li>
+        <li><a href="https://www.linkedin.com/in/giulio-binosi" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
       </ul>
     </section>
     
